@@ -27,5 +27,3 @@ Address found!
 t1ggCvyiEbAM6fkeznbVsFuAR5HWWU3Tcax
 KwrxLTYNDZgYFFiP58oZTLDYJZNXMEUw5bmSiGweRoZm9Rdc8hcA 
 ```
-
-Please note that this is single threaded for the time being, so it will take a while to find an address

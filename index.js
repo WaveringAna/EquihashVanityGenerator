@@ -1,25 +1,40 @@
-var bitcore = require("bitcore-lib-zcash");
-var arg1 = process.argv[2].toString();
-var arg2= arg1.length + 2;
+var bitcore = require("bitcore-lib-zcash"),
+	cluster = require('cluster'),
+	numCPUs = require('os').cpus().length;
 
-console.log('Looking for '+ 't1'+ arg1)
-console.log(arg1.length)
-console.log('')
+if (cluster.isMaster) {
+	// Fork workers.
+  for (var i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
 
-while (1) {
-	var privateKey = new bitcore.PrivateKey();
-	var address = privateKey.toAddress().toString();
-	console.log(address);
-	console.log(privateKey.toWIF());
-	
-	if (address.substring(2, arg2) == arg1){
-		console.log("Address found!");
-		console.log(''); console.log(''); console.log('');
-		
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`worker ${worker.process.pid} died`);
+  });
+  
+} else {
+	var arg1 = process.argv[2].toString();
+	var arg2= arg1.length + 2;
+
+	console.log('Looking for '+ 't1'+ arg1)
+	console.log(arg1.length)
+	console.log('')
+
+	while (1) {
+		var privateKey = new bitcore.PrivateKey();
+		var address = privateKey.toAddress().toString();
 		console.log(address);
 		console.log(privateKey.toWIF());
-		break;
+	
+		if (address.substring(2, arg2) == arg1){
+			console.log("Address found!");
+			console.log(''); console.log(''); console.log('');
+		
+			console.log(address);
+			console.log(privateKey.toWIF());
+			
+			process.exit()
+		}
+		console.log(address.substring(2, arg2).toString());
 	}
-	console.log(address.substring(2, arg2).toString());
 }
-
