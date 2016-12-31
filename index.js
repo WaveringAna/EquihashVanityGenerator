@@ -1,4 +1,4 @@
-var bitcore = require("bitcore-lib-zcash"),
+var bitcore = require('zcash-bitcore-lib'),
 	cluster = require('cluster'),
 	numCPUs = require('os').cpus().length;
 
