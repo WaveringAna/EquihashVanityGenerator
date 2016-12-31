@@ -1,0 +1,28 @@
+{
+  "name": "equihashvanitygenerator",
+  "version": "1.0.0",
+  "description": "A vanity address generator for cryptocurrencies like ZClassic.",
+  "main": "index.js",
+  "dependencies": {
+    "zcash-bitcore-node "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aayanl/EquihashVanityGenerator.git"
+  },
+  "keywords": [
+    "vanity",
+    "zcash",
+    "zclassic"
+  ],
+  "author": "aayanl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aayanl/EquihashVanityGenerator/issues"
+  },
+  "homepage": "https://github.com/aayanl/EquihashVanityGenerator#readme"
+}
