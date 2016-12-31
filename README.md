@@ -10,6 +10,7 @@ How to use
 ------------------------------
 
 >$ node ./index.js gg
+
 ```
 t1fz8dRHJh2AcLAUHFuFhgjS1KGwYizvuA5
 KxCq1aLhPhrAVXq4ywryGYHv5EnQcr9ZUUisb6HwibXdEiPZwq7A
