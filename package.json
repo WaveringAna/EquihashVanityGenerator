@@ -20,7 +20,7 @@
     "zclassic"
   ],
   "author": "aayanl",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aayanl/EquihashVanityGenerator/issues"
   },
