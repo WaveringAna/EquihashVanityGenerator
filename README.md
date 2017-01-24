@@ -1,6 +1,10 @@
 # EquihashVanityGenerator
 
-A vanity address generator for coins like ZClassic
+A CPU vanity address generator for coins like ZClassic
+
+Dependencies
+------------------------------
+zcash-bitcore-lib
 
 Setup
 ------------------------------
